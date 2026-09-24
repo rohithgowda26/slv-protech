@@ -16,16 +16,22 @@ export default function Home() {
 
       <main>
         <Hero />
+
         <Services />
+
         <About />
+
         <Stats />
+
         <Testimonials />
+
         <CTA />
       </main>
 
       <Footer />
 
       <QuotePopup />
+
       <WhatsAppButton />
     </>
   );

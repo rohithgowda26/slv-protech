@@ -17,44 +17,24 @@ export default function Navbar() {
 
   const serviceItems = [
     {
-      name: "AI-Powered Website Design",
-      href: "/services/ai-powered-website-design",
-    },
-    {
-      name: "E-Commerce Stores",
-      href: "/services/e-commerce-stores",
+      name: "Web Development",
+      href: "/services/web-development",
     },
     {
       name: "Mobile App Development",
       href: "/services/mobile-app-development",
     },
     {
-      name: "AI Chatbots & Voice Bots",
-      href: "/services/ai-chatbots-voice-bots",
+      name: "AI Development",
+      href: "/services/ai-development",
     },
     {
-      name: "Agentic AI Automation",
-      href: "/services/agentic-ai-automation",
+      name: "E-Commerce Development",
+      href: "/services/e-commerce-development",
     },
     {
-      name: "WordPress Development",
-      href: "/services/wordpress-development",
-    },
-    {
-      name: "Shopify Store Development",
-      href: "/services/shopify-store-development",
-    },
-    {
-      name: "Digital Marketing",
-      href: "/services/digital-marketing",
-    },
-    {
-      name: "Landing Page Design",
-      href: "/services/landing-page-design",
-    },
-    {
-      name: "AI-Powered Websites",
-      href: "/services/ai-powered-websites",
+      name: "Custom Software",
+      href: "/services/custom-software",
     },
   ];
 
@@ -70,29 +50,29 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-blue-100/80 bg-white/90 shadow-sm backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-[76px] items-center justify-between">
-          {/* LOGO */}
+          {/* Logo */}
           <Link
             href="/"
             aria-label="SLV PROTECH Home"
             className="group flex items-center gap-3"
           >
-            <img
-              src="/logos/logo.png"
-              alt="SLV PROTECH Logo"
-              className="h-10 w-10 object-contain transition duration-300 group-hover:scale-105 sm:h-11 sm:w-11 lg:h-12 lg:w-12"
-            />
+            {/* Footer-style circular SLV logo */}
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-600 bg-slate-950 text-[12px] font-bold text-blue-400 transition duration-300 group-hover:scale-105 sm:h-11 sm:w-11 lg:h-12 lg:w-12">
+              SLV
+            </div>
 
+            {/* Footer-style brand name */}
             <span className="text-xl font-extrabold tracking-tight text-slate-900">
               SLV
               <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                .PROTECH
+                PROTECH
               </span>
             </span>
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
+          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-2 lg:flex">
-            {/* HOME */}
+            {/* Home */}
             <Link
               href="/"
               className={`rounded-full px-4 py-2 text-sm transition-all duration-200 ${
@@ -104,7 +84,7 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* ABOUT */}
+            {/* About */}
             <Link
               href="/about"
               className={`rounded-full px-4 py-2 text-sm transition-all duration-200 ${
@@ -116,7 +96,7 @@ export default function Navbar() {
               About
             </Link>
 
-            {/* SERVICES DROPDOWN */}
+            {/* Services Dropdown */}
             <div className="group relative">
               <Link
                 href="/services"
@@ -132,18 +112,14 @@ export default function Navbar() {
                 </span>
               </Link>
 
-              {/* DROPDOWN */}
-              <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="rounded-2xl border border-blue-100 bg-white p-2 shadow-xl shadow-blue-100/40">
+              {/* Services Dropdown */}
+              <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="rounded-xl border border-blue-100 bg-white p-2 shadow-lg shadow-blue-100/40">
                   {serviceItems.map((service) => (
                     <Link
                       key={service.name}
                       href={service.href}
-                      className={`block rounded-xl px-4 py-2.5 text-sm transition-all duration-200 ${
-                        pathname === service.href
-                          ? "bg-blue-50 font-semibold text-blue-600"
-                          : "font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600"
-                      }`}
+                      className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-600"
                     >
                       {service.name}
                     </Link>
@@ -152,7 +128,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* PORTFOLIO */}
+            {/* Portfolio */}
             <Link
               href="/portfolio"
               className={`rounded-full px-4 py-2 text-sm transition-all duration-200 ${
@@ -164,7 +140,7 @@ export default function Navbar() {
               Portfolio
             </Link>
 
-            {/* CONTACT */}
+            {/* Contact */}
             <Link
               href="/contact"
               className={`rounded-full px-4 py-2 text-sm transition-all duration-200 ${
@@ -176,7 +152,7 @@ export default function Navbar() {
               Contact
             </Link>
 
-            {/* GET STARTED */}
+            {/* Get Started */}
             <Link
               href="/contact"
               className="ml-3 rounded-full bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-blue-200/60 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-200"
@@ -186,7 +162,7 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* MOBILE MENU BUTTON */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-xl text-slate-700 transition hover:bg-blue-100 lg:hidden"
@@ -196,11 +172,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* MOBILE NAVIGATION */}
+        {/* Mobile Navigation */}
         {menuOpen && (
           <nav className="border-t border-blue-100 py-5 lg:hidden">
             <div className="flex flex-col gap-2">
-              {/* HOME */}
+              {/* Home */}
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
@@ -213,7 +189,7 @@ export default function Navbar() {
                 Home
               </Link>
 
-              {/* ABOUT */}
+              {/* About */}
               <Link
                 href="/about"
                 onClick={() => setMenuOpen(false)}
@@ -226,7 +202,7 @@ export default function Navbar() {
                 About
               </Link>
 
-              {/* MOBILE SERVICES */}
+              {/* Mobile Services */}
               <div className="rounded-xl border border-blue-100 bg-white p-2">
                 <Link
                   href="/services"
@@ -246,11 +222,7 @@ export default function Navbar() {
                       key={service.name}
                       href={service.href}
                       onClick={() => setMenuOpen(false)}
-                      className={`block rounded-lg px-3 py-2 text-sm transition ${
-                        pathname === service.href
-                          ? "bg-blue-50 font-semibold text-blue-600"
-                          : "text-slate-600 hover:bg-blue-50 hover:text-blue-600"
-                      }`}
+                      className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-blue-50 hover:text-blue-600"
                     >
                       {service.name}
                     </Link>
@@ -258,7 +230,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* PORTFOLIO */}
+              {/* Portfolio */}
               <Link
                 href="/portfolio"
                 onClick={() => setMenuOpen(false)}
@@ -271,7 +243,7 @@ export default function Navbar() {
                 Portfolio
               </Link>
 
-              {/* CONTACT */}
+              {/* Contact */}
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
@@ -284,7 +256,7 @@ export default function Navbar() {
                 Contact
               </Link>
 
-              {/* GET STARTED */}
+              {/* Get Started */}
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}

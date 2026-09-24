@@ -80,10 +80,7 @@ const clients = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
-  // Number of cards visible
   const cardsPerView = 3;
-
-  // Maximum starting position
   const maxIndex = clients.length - cardsPerView;
 
   useEffect(() => {
@@ -135,7 +132,7 @@ export default function Testimonials() {
 
         <div className="mt-10 overflow-hidden">
           <div
-            className="flex transition-transform duration-700 ease-in-out"
+            className="flex items-stretch transition-transform duration-700 ease-in-out"
             style={{
               transform: `translateX(-${current * (100 / cardsPerView)}%)`,
             }}
@@ -143,33 +140,33 @@ export default function Testimonials() {
             {clients.map((client) => (
               <div
                 key={client.company}
-                className="w-full shrink-0 px-3 sm:w-1/2 lg:w-1/3"
+                className="flex w-full shrink-0 px-3 sm:w-1/2 lg:w-1/3"
               >
                 {/* CARD */}
-                <div className="mx-auto flex h-full max-w-[360px] flex-col rounded-[24px] border border-blue-100 bg-white p-6 shadow-md shadow-blue-100/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-100/50">
+                <div className="mx-auto flex h-[350px] w-full max-w-[360px] flex-col rounded-[24px] border border-blue-100 bg-white p-6 shadow-md shadow-blue-100/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-100/50">
                   {/* TOP ROW */}
                   <div className="flex items-center justify-between gap-3">
                     {/* Company Initial */}
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 text-lg font-extrabold text-white shadow-md">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 text-lg font-extrabold text-white shadow-md">
                       {client.company.charAt(0)}
                     </div>
 
                     {/* Service */}
-                    <span className="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-600">
+                    <span className="max-w-[190px] truncate rounded-full bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-600">
                       {client.service}
                     </span>
                   </div>
 
                   {/* COMPANY NAME */}
-                  <h3 className="mt-6 text-xl font-extrabold leading-tight text-slate-950">
+                  <h3 className="mt-6 min-h-[56px] text-xl font-extrabold leading-tight text-slate-950">
                     {client.company}
                   </h3>
 
                   {/* Accent Line */}
-                  <div className="mt-4 h-1 w-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                  <div className="mt-4 h-1 w-12 shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
 
                   {/* DESCRIPTION */}
-                  <p className="mt-5 text-sm leading-7 text-slate-600">
+                  <p className="mt-5 line-clamp-3 text-sm leading-7 text-slate-600">
                     {client.description}
                   </p>
 
@@ -181,7 +178,7 @@ export default function Testimonials() {
                           SLV PROTECH
                         </span>
 
-                        <span className="text-lg font-semibold text-blue-500">
+                        <span className="text-lg font-semibold text-blue-500 transition-transform duration-300 hover:translate-x-1">
                           →
                         </span>
                       </div>

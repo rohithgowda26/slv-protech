@@ -201,18 +201,21 @@ export default function PortfolioPage() {
         {/* ================================================= */}
 
         <section className="bg-gradient-to-br from-slate-50 via-blue-50/40 to-cyan-50/40 px-6 py-12 sm:py-16 lg:px-8">
-          <div className="mx-auto grid max-w-6xl items-start gap-7 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl items-stretch gap-7 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => {
               const theme = themes[project.theme];
 
               return (
                 <article
                   key={project.company}
-                  className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-200/30"
+                  className="group relative flex h-[590px] flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-200/30"
                 >
+                  {/* ================================================= */}
                   {/* VISUAL HEADER */}
+                  {/* ================================================= */}
+
                   <div
-                    className={`relative h-48 overflow-hidden bg-gradient-to-br ${theme.gradient}`}
+                    className={`relative h-48 shrink-0 overflow-hidden bg-gradient-to-br ${theme.gradient}`}
                   >
                     {/* Glow */}
                     <div
@@ -246,33 +249,40 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Category */}
-                    <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
+                    <span className="absolute right-5 top-5 max-w-[190px] truncate rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
                       {project.category}
                     </span>
                   </div>
 
+                  {/* ================================================= */}
                   {/* CONTENT */}
-                  <div className="p-6">
+                  {/* ================================================= */}
+
+                  <div className="flex flex-1 flex-col p-6">
+                    {/* Category */}
                     <p
-                      className={`text-xs font-bold uppercase tracking-[0.18em] ${theme.accent}`}
+                      className={`min-h-[18px] text-xs font-bold uppercase tracking-[0.18em] ${theme.accent}`}
                     >
                       {project.category}
                     </p>
 
-                    <h2 className="mt-2 text-2xl font-black leading-tight text-slate-950">
+                    {/* Company */}
+                    <h2 className="mt-2 min-h-[64px] text-2xl font-black leading-tight text-slate-950">
                       {project.company}
                     </h2>
 
-                    <h3 className="mt-3 text-base font-bold text-slate-800">
+                    {/* Project Title */}
+                    <h3 className="mt-3 min-h-[24px] text-base font-bold text-slate-800">
                       {project.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-slate-600">
+                    {/* Description */}
+                    <p className="mt-3 line-clamp-3 min-h-[72px] text-sm leading-6 text-slate-600">
                       {project.description}
                     </p>
 
                     {/* Tags */}
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <div className="mt-5 flex min-h-[34px] flex-wrap content-start gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
@@ -284,7 +294,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Bottom Accent */}
-                    <div className="mt-6 flex items-center gap-3">
+                    <div className="mt-auto flex items-center gap-3 pt-7">
                       <div
                         className={`h-1 flex-1 rounded-full bg-gradient-to-r ${theme.gradient} opacity-20 transition-all duration-500 group-hover:opacity-100`}
                       />

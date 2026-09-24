@@ -1,124 +1,102 @@
 import Link from "next/link";
 
-const services = [
-  {
-    name: "AI-Powered Website Design",
-    href: "/services/ai-powered-website-design",
-  },
-  {
-    name: "E-Commerce Stores",
-    href: "/services/e-commerce-stores",
-  },
-  {
-    name: "Mobile App Development",
-    href: "/services/mobile-app-development",
-  },
-  {
-    name: "AI Chatbots & Voice Bots",
-    href: "/services/ai-chatbots-voice-bots",
-  },
-  {
-    name: "Agentic AI Automation",
-    href: "/services/agentic-ai-automation",
-  },
-  {
-    name: "WordPress Development",
-    href: "/services/wordpress-development",
-  },
-  {
-    name: "Shopify Store Development",
-    href: "/services/shopify-store-development",
-  },
-
-  {
-    name: "Landing Page Design",
-    href: "/services/landing-page-design",
-  },
-  {
-    name: "AI-Powered Websites",
-    href: "/services/ai-powered-websites",
-  },
-];
-
 export default function Footer() {
+  const services = [
+    {
+      name: "Web Development",
+      href: "/services/web-development",
+    },
+    {
+      name: "Mobile App Development",
+      href: "/services/mobile-app-development",
+    },
+    {
+      name: "AI Development",
+      href: "/services/ai-development",
+    },
+    {
+      name: "E-Commerce Development",
+      href: "/services/e-commerce-development",
+    },
+    {
+      name: "Custom Software",
+      href: "/services/custom-software",
+    },
+  ];
+
   return (
-    <footer className="bg-slate-950 text-slate-300">
-      {/* MAIN FOOTER */}
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.5fr_1fr]">
-          {/* COMPANY */}
+    <footer className="bg-[#020617] text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {/* Company */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <img
-                src="/logos/logo.png"
-                alt="SLV PROTECH Logo"
-                className="h-10 w-10 object-contain"
-              />
-
-              <span className="text-xl font-extrabold tracking-tight text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-blue-500 text-sm font-bold text-blue-400">
                 SLV
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  .PROTECH
-                </span>
+              </div>
+
+              <span className="text-xl font-extrabold tracking-tight">
+                SLV
+                <span className="text-indigo-400">PROTECH</span>
               </span>
             </Link>
 
-            <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">
+            <p className="mt-8 max-w-xs text-sm leading-7 text-slate-400">
               Technology solutions designed to help businesses grow, innovate
               and operate efficiently.
             </p>
           </div>
 
-          {/* QUICK LINKS */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-sm font-bold text-white">Quick Links</h3>
 
-            <div className="mt-5 space-y-3">
+            <div className="mt-6 flex flex-col gap-4">
               <Link
                 href="/"
-                className="block text-sm text-slate-400 transition hover:text-blue-400"
+                className="text-sm text-slate-400 transition hover:text-blue-400"
               >
                 Home
               </Link>
 
               <Link
                 href="/about"
-                className="block text-sm text-slate-400 transition hover:text-blue-400"
+                className="text-sm text-slate-400 transition hover:text-blue-400"
               >
                 About
               </Link>
 
               <Link
                 href="/services"
-                className="block text-sm text-slate-400 transition hover:text-blue-400"
+                className="text-sm text-slate-400 transition hover:text-blue-400"
               >
                 Services
               </Link>
 
               <Link
                 href="/portfolio"
-                className="block text-sm text-slate-400 transition hover:text-blue-400"
+                className="text-sm text-slate-400 transition hover:text-blue-400"
               >
                 Portfolio
               </Link>
 
               <Link
                 href="/contact"
-                className="block text-sm text-slate-400 transition hover:text-blue-400"
+                className="text-sm text-slate-400 transition hover:text-blue-400"
               >
                 Contact
               </Link>
             </div>
           </div>
 
-          {/* SERVICES */}
+          {/* Services */}
           <div>
             <h3 className="text-sm font-bold text-white">Services</h3>
 
-            <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+            <div className="mt-6 flex flex-col gap-4">
               {services.map((service) => (
                 <Link
-                  key={service.name}
+                  key={service.href}
                   href={service.href}
                   className="text-sm leading-6 text-slate-400 transition hover:text-blue-400"
                 >
@@ -128,11 +106,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* CONTACT */}
+          {/* Contact */}
           <div>
             <h3 className="text-sm font-bold text-white">Contact Us</h3>
 
-            <div className="mt-5 space-y-4 text-sm leading-6 text-slate-400">
+            <div className="mt-6 space-y-5 text-sm leading-6 text-slate-400">
               <p>
                 69th Cross, 5th Block,
                 <br />
@@ -156,12 +134,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* DIVIDER */}
-        <div className="mt-12 border-t border-slate-800 pt-7">
-          <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-500 sm:flex-row">
-            <p>© 2026 SLV PROTECH. All rights reserved.</p>
+        {/* Bottom */}
+        <div className="mt-14 border-t border-slate-800 pt-6">
+          <div className="flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {new Date().getFullYear()} SLV PROTECH. All rights reserved.
+            </p>
 
-            <div className="flex items-center gap-5">
+            <div className="flex gap-5">
               <Link
                 href="/privacy-policy"
                 className="transition hover:text-blue-400"
@@ -170,7 +150,7 @@ export default function Footer() {
               </Link>
 
               <Link href="/terms" className="transition hover:text-blue-400">
-                Terms
+                Terms & Conditions
               </Link>
             </div>
           </div>
