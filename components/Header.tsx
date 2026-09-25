@@ -49,13 +49,6 @@ export default function Header() {
           >
             Portfolio
           </Link>
-
-          <Link
-            href="/contact"
-            className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:bg-blue-50 hover:text-blue-600"
-          >
-            Contact
-          </Link>
         </nav>
 
         {/* Get Started */}
@@ -63,7 +56,7 @@ export default function Header() {
           href="/contact"
           className="rounded-full bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-200/60 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-200"
         >
-          Get Started
+          Contact Us
           <span className="ml-1">→</span>
         </Link>
       </div>

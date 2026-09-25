@@ -25,10 +25,10 @@ const serviceImages: Record<string, string> = {
     "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85",
 
   "e-commerce-development":
-    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+    "https://cdn.dribbble.com/userupload/8491500/file/original-898a5dae48175c52aac2253d899d8c7e.jpg",
 
   "custom-software":
-    "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9ZUzPfcT6HxnXM2ueY60KIVZomHraqeAcNbDyKKPLqp-0s8SFpfAH075&s=10",
 };
 
 export function generateStaticParams() {

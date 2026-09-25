@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-white/25" />
 
       {/* Main Hero */}
-      <div className="relative z-10 mx-auto flex min-h-[590px] max-w-7xl items-center px-6 py-2 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[590px] max-w-7xl items-center px-6 py-0 lg:px-8">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           {/* LEFT CONTENT */}
           <div

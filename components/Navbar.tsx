@@ -140,24 +140,12 @@ export default function Navbar() {
               Portfolio
             </Link>
 
-            {/* Contact */}
-            <Link
-              href="/contact"
-              className={`rounded-full px-4 py-2 text-sm transition-all duration-200 ${
-                isActive("/contact")
-                  ? "bg-blue-50 font-semibold text-blue-600"
-                  : "font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600"
-              }`}
-            >
-              Contact
-            </Link>
-
-            {/* Get Started */}
+            {/* Contact Us */}
             <Link
               href="/contact"
               className="ml-3 rounded-full bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-blue-200/60 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-200"
             >
-              Get Started
+              Contact Us
               <span className="ml-1">→</span>
             </Link>
           </nav>
